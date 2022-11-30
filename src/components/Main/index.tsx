@@ -1,53 +1,53 @@
-import { Container } from "./styles";
-import {
-  CategoriesContainer,
-  Footer,
-  MenuContainer,
-  FooterContainer,
-} from "../Main/styles";
-import { Header } from "../Header";
-import { Categories } from "../Categories";
-import { Menu } from "../Menu";
-import { Button } from "../Button";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { Text } from "../Text";
-import { View } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
+import { Championships } from "../../screens/Championships";
+import { Profile } from "../../screens/Profile";
+import { Container } from "./styles";
+import { Introduction } from "../../screens/Introduction";
 
-function SettingsScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>Settings!</Text>
-    </View>
-  );
-}
-
-function Main2() {
-  return (
-    <>
-      <Container>
-        <Header />
-
-        <CategoriesContainer>
-          <Categories />
-        </CategoriesContainer>
-
-        <MenuContainer>
-          <Menu />
-        </MenuContainer>
-      </Container>
-    </>
-  );
-}
 const Tab = createBottomTabNavigator();
 
 export function Main() {
   return (
-    <NavigationContainer>
-      <Tab.Navigator screenOptions={{ headerShown: false }}>
-        <Tab.Screen name="Home" component={Main2} />
-        <Tab.Screen name="Settings" component={SettingsScreen} />
-      </Tab.Navigator>
-    </NavigationContainer>
+    <Container>
+      <NavigationContainer>
+        <Tab.Navigator
+          screenOptions={({ route }) => ({
+            tabBarIcon: ({ color, size }) => {
+              let iconName: any;
+              switch (route.name) {
+                case "Campeonatos":
+                  iconName = "home";
+                  break;
+                case "Procurar":
+                  iconName = "search";
+                  break;
+                case "Criar":
+                  iconName = "add-circle";
+                  break;
+                case "Perfil":
+                  iconName = "person";
+                  break;
+                case "Introdução":
+                  iconName = "albums";
+                  break;
+              }
+
+              return <Ionicons name={iconName} size={size} color={color} />;
+            },
+            tabBarActiveTintColor: "#234992",
+            tabBarInactiveTintColor: "gray",
+            headerShown: false,
+          })}
+        >
+          <Tab.Screen name="Campeonatos" component={Championships} />
+          <Tab.Screen name="Procurar" component={Championships} />
+          <Tab.Screen name="Criar" component={Championships} />
+          <Tab.Screen name="Introdução" component={Introduction} />
+          <Tab.Screen name="Perfil" component={Profile} />
+        </Tab.Navigator>
+      </NavigationContainer>
+    </Container>
   );
 }

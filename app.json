@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "DaiveMobile",
-    "slug": "DaiveMobile",
+    "name": "Daive",
+    "slug": "Daive",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./src/assets/icon.png",
@@ -21,6 +21,8 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "com.Daive",
+      "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./src/assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
@@ -28,6 +30,11 @@
     },
     "web": {
       "favicon": "./src/assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "74f3cd6e-1de8-4387-8e21-dbc6658aa5d5"
+      }
     }
   }
 }

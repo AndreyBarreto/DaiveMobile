@@ -11,6 +11,7 @@ export function Menu() {
       contentContainerStyle={{ paddingHorizontal: 24 }}
       keyExtractor={(product) => product._id}
       ItemSeparatorComponent={Separator}
+      ListFooterComponent={Separator}
       renderItem={({ item: product }) => (
         <Product>
           <ProductImage source={require("./DaiveLogo.png")} />

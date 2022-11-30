@@ -16,12 +16,12 @@ export const categories = [
   },
   {
     _id: "6372d5dcf9ebdda354700c94",
-    name: "Beach Tennis",
+    name: "Tênis",
     icon: "🎾",
   },
   {
     _id: "6372d5dcf9ebdda354700c93",
-    name: "Beach Tennis",
+    name: "Tênis",
     icon: "🎾",
   },
 ];
