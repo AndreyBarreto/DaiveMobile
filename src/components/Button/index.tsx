@@ -1,9 +1,10 @@
 import { Text } from "../Text";
 import { Container } from "./style";
+import { ReactElement } from "react";
 
 interface ButtonProps {
-  children: string;
-  onPress: () => void;
+  children: string | ReactElement;
+  onPress?: () => void;
   disabled?: boolean;
 }
 

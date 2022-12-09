@@ -10,7 +10,9 @@ export function Profile() {
   return (
     <Container>
       <Icon>
-        <ProfileImage source={require("./DaiveLogo.png")}></ProfileImage>
+        <ProfileImage
+          source={require("../../assets/DaiveLogo.png")}
+        ></ProfileImage>
       </Icon>
       <Text weight="600" size={32}>
         Daive

@@ -3,6 +3,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
 import { Championships } from "../../screens/Championships";
 import { Profile } from "../../screens/Profile";
+import { Login } from "../../screens/Login";
 import { Container } from "./styles";
 import { Introduction } from "../../screens/Introduction";
 
@@ -43,7 +44,7 @@ export function Main() {
         >
           <Tab.Screen name="Campeonatos" component={Championships} />
           <Tab.Screen name="Procurar" component={Championships} />
-          <Tab.Screen name="Criar" component={Championships} />
+          <Tab.Screen name="Criar" component={Login} />
           <Tab.Screen name="Introdução" component={Introduction} />
           <Tab.Screen name="Perfil" component={Profile} />
         </Tab.Navigator>
