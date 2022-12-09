@@ -5,12 +5,23 @@ import { sliderItems } from "../../mocks/introduction";
 import WaveTop from "../../components/Waves/WaveTop";
 import WaveBot from "../../components/Waves/WaveBot";
 import { useNavigation } from "@react-navigation/native";
-import { View } from "react-native";
+import { ImageSourcePropType } from "react-native";
+
+interface SlideItems {
+  item: {
+    key: string;
+    title: string;
+    title2: string;
+    subtitle: string;
+    subtitle2: string;
+    image: ImageSourcePropType;
+  };
+}
 
 export function Introduction() {
   const navigation = useNavigation();
 
-  function renderSlides({ item }: any) {
+  function renderSlides({ item }: SlideItems) {
     return (
       <>
         <Container>
