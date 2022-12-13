@@ -24,3 +24,16 @@ export const ProfileImage = styled.Image`
   height: 176px;
   border-radius: 88px;
 `;
+
+export const About = styled.View`
+  margin-top: 32px;
+  justify-content: space-between;
+`;
+export const Label = styled.View`
+  align-items: center;
+  margin: 12px 0;
+`;
+
+export const Info = styled.View`
+  margin-top: 2px;
+`;

@@ -51,7 +51,7 @@ export function Introduction() {
         renderItem={renderSlides}
         data={sliderItems}
         activeDotStyle={{
-          backgroundColor: "#93ccea",
+          backgroundColor: "#8AB2FF",
           width: 40,
         }}
         onDone={goToLogin}
